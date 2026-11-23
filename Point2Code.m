@@ -61,7 +61,7 @@ hold on;
 plot(s, nsptheory,'go');
 xlabel("s");
 ylabel("n(s,p)");
-title('cluster number density at p =0.90')
+title('Cluster Number Density at p =0.90')
 legend("Simulation", "Theory");
 
 %sets number of simulations, number of sites in the lattice and the
@@ -120,19 +120,19 @@ for k =1:length(pv)
 end 
 xlim([1 150]);
 yscale('log')
-title("cluster number density for different occupation probabilites");
-xlabel("cluster size s")
-ylabel("cluster number density n(s,p)")
+title("Cluster Number Density for Different Occupation Probabilites");
+xlabel("Cluster Size s")
+ylabel("Cluster Number Density n(s,p)")
 legend;
 hold off;
 %plots the average and characteristic cluster sizes against occupation
 %probability
 figure;
 plot(pv, S, 'bo-', pv, sxi, 'r*-');
-title("average and characteristic cluster sizes");
+title("Average and Characteristic Cluster Sizes");
 xlabel('p');
-ylabel(' cluster size');
-legend('Average cluster size', 'characteristic cluster size', 'Location', 'best');
+ylabel(' Cluster Size');
+legend('Average Cluster Size', 'Characteristic Cluster Size', 'Location', 'Best');
 grid on;
 %estimates gamma       
 a = polyfit(log(1-pv), log(S), 1);
