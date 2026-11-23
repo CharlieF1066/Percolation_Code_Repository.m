@@ -63,6 +63,7 @@ xlabel("s");
 ylabel("n(s,p)");
 title('Cluster Number Density at p =0.90')
 legend("Simulation", "Theory");
+fontsize(gcf, 18, "points")
 
 %sets number of simulations, number of sites in the lattice and the
 %different occupation probabilities used
@@ -125,6 +126,8 @@ xlabel("Cluster Size s")
 ylabel("Cluster Number Density n(s,p)")
 legend;
 hold off;
+fontsize(gcf, 18, "points")
+
 %plots the average and characteristic cluster sizes against occupation
 %probability
 figure;
@@ -143,5 +146,6 @@ sigma = -1/b(1);
 %prints the critical exponents
 disp(["gamma = ", num2str(gamma)])
 disp(["sigma = ", num2str(sigma)])
+fontsize(gcf, 18, "points")
 
   
