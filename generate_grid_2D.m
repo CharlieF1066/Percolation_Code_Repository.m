@@ -34,9 +34,15 @@ function grid = generate_grid(L,p)
     %Relabel every cluster so it is 1,2,...,n
     cluster_labels = unique(grid);
     n = length(cluster_labels);
+    %Shuffling the order of the new labels will make distinguishing the
+    %clusters easier on a color map
+    cluster_labels = cluster_labels(randperm(n));
     for i = 1:n
-        grid(grid == cluster_labels(i)) = i;
+        grid(grid == cluster_labels(i)) = i + 0.5;
     end
+    grid = grid - 0.5;
+    % The 0.5 is used to prevent the new labels overlapping with the old
+    % labels and connecting two clusters which should not be joined
 
 
 
